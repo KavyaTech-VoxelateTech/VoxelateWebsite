@@ -1,35 +1,52 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import NavLink from './NavLink';
 
 const Header = () => {
   return (
-    <header style={{ backgroundColor: '#000000' }}>
-      <div className="max-w-4xl mx-auto flex items-center justify-between p-4">
-        <Link href="/">
+    <header 
+      style={{ backgroundColor: '#000000', borderColor: '#90ee90' }}  // Light green border color
+      className="rounded-full w-full max-w-7xl mx-auto my-4 px-8 py-4 shadow-lg border border-2"
+    >
+      <div className="flex items-center justify-between w-full">
+        {/* Logo on the left */}
+        <Link href="/" className="flex-shrink-0">
           <Image 
             src="/logo-voxelate.png" // Path to your logo image in the public folder
             alt="Logo"
-            width={200} // Adjust as needed
-            height={200} // Adjust as needed
+            width={150} // Adjust as needed
+            height={150} // Adjust as needed
             className="cursor-pointer"
           />
         </Link>
-        <nav>
-          <ul className="flex space-x-4 text-gray-400 ">
+        
+        {/* Menu items on the right */}
+        <nav className="flex-grow text-right">
+          <ul className="flex justify-end space-x-6 text-gray-100">
             <li>
-              <Link href="/">Home</Link>
+              <Link className="opacity-60 hover:opacity-100" href="/">
+                Home
+              </Link>
             </li>
             <li>
-              <Link href="/about-us">About Us</Link>
+              <Link className="opacity-60 hover:opacity-100" href="/about-us">
+                About Us
+              </Link>
             </li>
             <li>
-              <Link href="/services">Services</Link>
+              <Link className="opacity-60 hover:opacity-100" href="/services">
+                Services
+              </Link>
             </li>
             <li>
-              <Link href="/portfolio">Porfolio</Link>
+              <Link className="opacity-60 hover:opacity-100" href="/portfolio">
+                Portfolio
+              </Link>
             </li>
             <li>
-              <Link href="/">Contact Us</Link>
+              <Link className="opacity-60 hover:opacity-100" href="/contact">
+                Contact Us
+              </Link>
             </li>
           </ul>
         </nav>
