@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Link from "next/link";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "../assests/globals.css";
 
@@ -31,11 +32,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="bg-black-200 min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
+        <div className="#dddddd min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
           
-          <div>
-            <Link href="/about-us">About Us</Link> | <Link href="/">Home</Link>
-          </div>
+          <Header/>
 
           <main>
             {children}
