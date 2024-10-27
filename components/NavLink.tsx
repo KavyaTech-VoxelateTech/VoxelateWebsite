@@ -1,8 +1,13 @@
+"use client"
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function NavLink(props){
+    const pathName = usePathname()
+    const active = pathName === props.path
     return (
-        <Link className="opacity-60 hover:opacity-100" href={props.path}>
+        <Link className={active ? "opacity-100":"opacity-50 hover:opacity-65"} href={props.path}>
             {props.text}
         </Link>
     )
