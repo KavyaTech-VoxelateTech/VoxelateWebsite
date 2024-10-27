@@ -24,30 +24,24 @@ const Header = () => {
         <nav className="flex-grow text-right">
           <ul className="flex justify-end space-x-6 text-gray-100">
             <li>
-              <Link className="opacity-60 hover:opacity-100" href="/">
-                Home
-              </Link>
+                <NavLink text="Home" path="/"/>
             </li>
             <li>
-              <Link className="opacity-60 hover:opacity-100" href="/about-us">
-                About Us
-              </Link>
+                <NavLink text="About Us" path="/about-us"/>
             </li>
             <li>
-              <Link className="opacity-60 hover:opacity-100" href="/services">
-                Services
-              </Link>
+                <NavLink text="Our Team" path="/our-team"/>
             </li>
             <li>
-              <Link className="opacity-60 hover:opacity-100" href="/portfolio">
-                Portfolio
-              </Link>
+                <NavLink text="Services" path="/our-services"/>
             </li>
             <li>
-              <Link className="opacity-60 hover:opacity-100" href="/contact">
-                Contact Us
-              </Link>
+                <NavLink text="Portfolio" path="/portfolio"/>
             </li>
+            <li>
+                <NavLink text="Contact Us" path="/contact-us"/>
+            </li>
+
           </ul>
         </nav>
       </div>
