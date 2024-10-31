@@ -5,8 +5,8 @@ import NavLink from './NavLink';
 const Header = () => {
   return (
     <header 
-      style={{ backgroundColor: '#000000', borderColor: '#90ee90' }}  // Light green border color
-      className="rounded-full w-full max-w-7xl mx-auto my-4 px-8 py-4 shadow-lg border border-2"
+      style={{ backgroundColor: '#000000', borderColor: '#006400' }}  // Dark green border color
+      className="rounded-full w-full max-w-7xl mx-auto my-4 px-8 py-4 shadow-lg border" // Thin border
     >
       <div className="flex items-center justify-between w-full">
         {/* Logo on the left */}
@@ -41,7 +41,6 @@ const Header = () => {
             <li>
                 <NavLink text="Contact Us" path="/contact-us"/>
             </li>
-
           </ul>
         </nav>
       </div>
